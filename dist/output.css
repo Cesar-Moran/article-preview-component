@@ -822,6 +822,32 @@ video {
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 68% 76%, 47% 100%, 30% 75%, 0% 75%);
 }
 
+.before\:absolute::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:relative::before {
+  content: var(--tw-content);
+  position: relative;
+}
+
+.before\:h-40::before {
+  content: var(--tw-content);
+  height: 10rem;
+}
+
+.before\:w-40::before {
+  content: var(--tw-content);
+  width: 10rem;
+}
+
+.before\:bg-black::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 @media (min-width: 768px) {
   .md\:mx-0 {
     margin-left: 0px;
@@ -830,6 +856,10 @@ video {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:h-auto {
@@ -866,11 +896,6 @@ video {
     --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
-
-  .md\:\[clip-path\:polygon\(0\%_0\%\2c _100\%_0\%\2c _100\%_75\%\2c _68\%_76\%\2c _47\%_100\%\2c _30\%_75\%\2c _0\%_75\%\)\] {
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 68% 76%, 47% 100%, 30% 75%, 0% 75%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 68% 76%, 47% 100%, 30% 75%, 0% 75%);
   }
 }
   
