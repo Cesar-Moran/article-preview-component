@@ -10,6 +10,10 @@ module.exports = {
         lightGrayishBlue: "#ecf2f8",
       },
       fontFamily: { manrope: "Manrope, sans-serif" },
+      clipPath: {
+        "custom-shape":
+          "polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 62% 100%, 50% 75%, 0% 75%)",
+      },
     },
   },
   plugins: [],

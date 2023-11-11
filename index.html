@@ -7,6 +7,10 @@
     <!-- Link to external fonts and CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/da5a13d499.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
       rel="stylesheet"
@@ -35,7 +39,7 @@
           class="rounded-t-xl md:w-80 md:h-auto md:rounded-none md:rounded-l-xl"
         />
         <!-- Image with responsive styling classes -->
-        <div class="py-10 px-8">
+        <div class="py-10 px-8 relative">
           <!-- Container for text content with padding -->
           <h2
             class="mb-4 text-veryDarkGrayishBlue text-xl font-bold md:text-2xl"
@@ -73,10 +77,51 @@
             </div>
             <!-- Another container with styling classes -->
             <div
-              class="flex items-center justify-center w-10 h-10 bg-lightGrayishBlue rounded-full"
+              class="flex items-center justify-center w-10 h-10 bg-lightGrayishBlue rounded-full relative right-0"
             >
               <!-- Image with styling classes -->
-              <img src="/images/icon-share.svg" alt="" class="w-4 h-4" />
+
+              <img
+                id="arrowBtn"
+                onclick="showDisplay()"
+                src="/images/icon-share.svg"
+                alt=""
+                class="w-4 h-4 cursor-pointer"
+              />
+            </div>
+            <div
+              id="hiddenModal"
+              class="flex justify-between p-8 absolute bg-veryDarkGrayishBlue -translate-x-1/2 translate-y-[0] bottom-[0] left-2/4 items-center w-full min-h-[1%] rounded-tl-[0] rounded-br-[15px] rounded-tr-[0] rounded-bl-[15px] hidden"
+            >
+              <div class="flex items-center gap-4">
+                <span class="uppercase tracking-[0.5rem] text-grayishBlue"
+                  >Share</span
+                >
+                <a href="https://www.facebook.com"
+                  ><i
+                    class="fa-brands fa-square-facebook text-white text-2xl"
+                  ></i
+                ></a>
+                <a href="https://www.x.com"
+                  ><i class="fa-brands fa-x-twitter text-white text-2xl"></i
+                ></a>
+                <a href="https://www.pinterest.com"
+                  ><i class="fa-brands fa-pinterest text-white text-2xl"></i
+                ></a>
+              </div>
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full relative bg-grayishBlue"
+              >
+                <!-- Image with styling classes -->
+
+                <img
+                  id="arrowBtn"
+                  onclick="showDisplay()"
+                  src="/images/icon-share.svg"
+                  alt=""
+                  class="w-4 h-4 cursor-pointer text-lightGrayishBlue"
+                />
+              </div>
             </div>
           </div>
         </div>
