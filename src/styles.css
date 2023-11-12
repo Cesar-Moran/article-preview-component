@@ -1,0 +1,202 @@
+:root {
+    /* Colours */
+    --veryDarkGrayishBlue: #48556a;
+    --desaturatedDarkBlue: #6d7f97;
+    --grayishBlue: #9eafc2;
+    --lightGrayishBlue: #ecf2f8;
+    /* Fonts */
+    --manrope: 'Manrope', sans-serif;; 
+}
+
+body {
+    
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    background-color: var(--lightGrayishBlue);
+    font-family: var(--manrope);
+}
+
+main {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; 
+    border-radius: 0.75rem; 
+    max-width: 24rem; 
+    background-color: #ffffff; 
+}
+
+article {
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem; 
+}
+
+.article__img {
+    border-top-left-radius: 0.75rem;
+border-top-right-radius: 0.75rem; 
+}
+
+article > div {
+    position: relative; 
+    padding-left: 2rem;
+    padding-right: 2rem; 
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem; 
+}
+
+article > div > h2 {
+    color: var(--veryDarkGrayishBlue);
+    margin-bottom: 1rem; 
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
+    font-weight: 700; 
+}
+
+article > div > p {
+    margin-bottom: 2rem; 
+    font-size: 1rem;
+    line-height: 1.5rem; 
+    font-weight: 500;
+    color: var(--grayishBlue)
+}
+
+.article__bottom-box {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: end; 
+}
+
+.article__bottom-box--leftside {
+    display: flex; 
+    gap: 1.25rem;
+    align-items: flex-end;
+}
+
+.article__bottom-box--leftside > img {
+    border-radius: 100%; 
+    width: 3rem; 
+    height: 3rem; 
+}
+
+.article__bottom-box--leftside > div {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.article__bottom-box--leftside > div > h3 {
+    color: var(--veryDarkGrayishBlue);
+    font-size: 1rem;
+    line-height: 1.5rem; 
+    font-weight: 700; 
+}
+
+.article__bottom-box--leftside > div > span {
+    color: var(--grayishBlue);
+}
+
+.article__left-side-btn {
+    background: var(--lightGrayishBlue);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+    right: 0; 
+    border-radius: 9999px; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+}
+
+.article__left-side-btn > img {
+    width: 1rem; 
+    height: 1rem; 
+    cursor: pointer; 
+}
+
+.article__topmodal {
+    background-color: var(--veryDarkGrayishBlue);
+    display: none;
+    justify-content: space-between;
+    position: absolute;
+    padding: 2rem;
+    transform: translate(-50%, 0);
+    bottom: 0;
+    left: 50%;
+    gap: 0.9rem;
+    align-items: center;
+    width: 100%;
+    min-height: 18%;
+    border-radius: 0 0 15px 15px;
+}
+
+.shown {
+    display: flex;
+}
+
+.article__topmodal--icons {
+    display: flex; 
+    gap: 1rem; 
+    align-items: center; 
+}
+
+.article__topmodal--icons > span{
+    text-transform: uppercase; 
+    letter-spacing: 0.5rem;
+    color: var(--grayishBlue);
+}
+
+.article__topmodal--icons > a > i {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 2rem; 
+
+}
+
+.article__topmodal--rightside-icon {
+    background-color: var(--grayishBlue);
+    display: flex; 
+    position: relative; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 9999px; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+}
+
+.article__topmodal--rightside-icon > img {
+    color: var(--lightGrayishBlue);
+    width: 1rem; 
+    height: 1rem; 
+    cursor: pointer; 
+
+}
+/* 768 MQ */
+
+@media (min-width: 768px) { 
+    main {  margin-left: 0;
+    margin-right: 0; 
+    flex-direction: row; 
+    max-width: 56rem; 
+    }
+    article {
+    display: flex; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+    }
+    .article__img {
+    border-radius: 0; 
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem; 
+    width: 20rem; 
+    height: auto;  
+    }
+
+    article > div > h2 {
+    font-size: 1.5rem;
+    line-height: 2rem; 
+    }
+    /* Hide mobile-active-state upon click */
+    .article__topmodal {
+        display: none;
+    }
+}
+  
